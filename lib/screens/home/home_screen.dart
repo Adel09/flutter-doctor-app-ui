@@ -133,7 +133,18 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             SizedBox(height: 24,),
             HomeSectionHeader(title: "Top Rated Doctor"),
-            DoctorListItem()
+            DoctorListItem(
+              name: "Dr. Ronald Richard",
+              specialty: "Heart Surgeon",
+              rating: "4.3",
+              times: "11 Am-03 Pm",
+            ),
+            DoctorListItem(
+              name: "Dr. Jenny Wilson",
+              specialty: "Dental Surgeon",
+              rating: "4.9",
+              times: "10 Am-12 Pm",
+            ),
           ],
         ),
       ),

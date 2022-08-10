@@ -62,6 +62,60 @@ class AppointmentCard extends StatelessWidget {
                 Expanded(child: SizedBox(height: 6,))
               ],
             ),
+          ),
+          SizedBox(height: 8,),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12.0),
+            child: Row(
+
+              children: [
+                Container(
+                  height: 42,
+                  //width: 130,
+                  padding: EdgeInsets.symmetric(horizontal: 8),
+                  decoration: BoxDecoration(
+                    color: Color(0xff474DCE),
+                    borderRadius: BorderRadius.circular(8)
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(Icons.calendar_today_rounded, color: Colors.white,),
+                      SizedBox(width: 4,),
+                      Text(
+                          "Sep 18, 2022",
+                        style: TextStyle(
+                          color: Colors.white
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(width: 12,),
+                Container(
+                  height: 42,
+                  //width: 130,
+                  padding: EdgeInsets.symmetric(horizontal: 8),
+                  decoration: BoxDecoration(
+                      color: Color(0xff474DCE),
+                      borderRadius: BorderRadius.circular(8)
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(Icons.access_time_outlined, color: Colors.white,),
+                      SizedBox(width: 4,),
+                      Text(
+                        "(11 Am-03 Pm)",
+                        style: TextStyle(
+                            color: Colors.white
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            ),
           )
         ],
       ),
