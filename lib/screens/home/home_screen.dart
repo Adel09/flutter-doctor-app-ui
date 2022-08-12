@@ -3,6 +3,8 @@ import 'package:koraplay_task/constants.dart';
 import 'package:koraplay_task/components/appointment_card.dart';
 import 'package:koraplay_task/components/section_header.dart';
 import 'package:koraplay_task/components/doctor_item.dart';
+import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
+import 'package:koraplay_task/screens/details/detail_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -144,9 +146,32 @@ class _HomeScreenState extends State<HomeScreen> {
               specialty: "Dental Surgeon",
               rating: "4.9",
               times: "10 Am-12 Pm",
+              onPressed: (context){
+                Navigator.push(
+                  context,
+                MaterialPageRoute(builder: (_) => DetailsScreen())
+                );
+              },
             ),
           ],
         ),
+      ),
+      bottomNavigationBar: FloatingNavbar(
+        borderRadius: 16.0,
+        margin: EdgeInsets.symmetric(horizontal: 20, vertical: 0),
+        onTap: (int val) {
+          //returns tab id which is user tapped
+        },
+        currentIndex: 0,
+        selectedBackgroundColor: Colors.black,
+        selectedItemColor: Colors.white,
+
+        items: [
+          FloatingNavbarItem(customWidget: SizedBox(height: 24, width: 24, child: Image(image: AssetImage("assets/images/icons/homeicon.png"),))),
+          FloatingNavbarItem(customWidget: SizedBox(height: 24, width: 24, child: Image(image: AssetImage("assets/images/icons/calendaricon.png"),))),
+          FloatingNavbarItem(customWidget: SizedBox(height: 24, width: 24,child: Image(image: AssetImage("assets/images/icons/chaticon.png"),))),
+          FloatingNavbarItem(customWidget: SizedBox(height: 24, width: 24,child: Image(image: AssetImage("assets/images/icons/profileicon.png"),))),
+        ],
       ),
     );
   }

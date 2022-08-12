@@ -23,7 +23,7 @@ class DoctorListItem extends StatelessWidget {
     return Container(
       height: MediaQuery.of(context).size.height * 0.113,
       width: MediaQuery.of(context).size.width,
-      margin: EdgeInsets.only(bottom: 20),
+      margin: EdgeInsets.only(bottom: 14),
       decoration: BoxDecoration(
           color: KPrimaryColor,
           borderRadius: BorderRadius.circular(16)
@@ -34,16 +34,37 @@ class DoctorListItem extends StatelessWidget {
           motion: ScrollMotion(),
           children: [
 
-            SlidableAction(
-              // An action can be bigger than the others.
+            // SlidableAction(
+            //   // An action can be bigger than the others.
+            //   flex: 1,
+            //   onPressed: onPressed,
+            //   backgroundColor: KPrimaryColor,
+            //   foregroundColor: Colors.white,
+            //   icon: Icons.archive,
+            //   borderRadius: BorderRadius.only(topRight: Radius.circular(16), bottomRight: Radius.circular(16)),
+            //   //label: 'Archive',
+            // ),
+            CustomSlidableAction(
               flex: 1,
-              onPressed: onPressed,
-              backgroundColor: KPrimaryColor,
-              foregroundColor: Colors.white,
-              icon: Icons.archive,
-              borderRadius: BorderRadius.only(topRight: Radius.circular(16), bottomRight: Radius.circular(16)),
-              //label: 'Archive',
-            ),
+                foregroundColor: KPrimaryColor,
+                onPressed: onPressed,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Flexible(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: KPrimaryColor,
+                          borderRadius: BorderRadius.only(topRight: Radius.circular(16), bottomRight: Radius.circular(16)),
+                        ),
+                        child: Center(
+                          child: Image(image: AssetImage("assets/images/icons/messageicon.png"),),
+                        ),
+                      ),
+                    ),
+                  ],
+                )
+            )
           ],
         ),
         child: Container(
