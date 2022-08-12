@@ -46,7 +46,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
       body: ListView(
         children: [
           Container(
-            height: MediaQuery.of(context).size.height * 0.25,
+            height: 220,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
               color: Color(0xff363CC0),

@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.crumlabs.koraplay_task">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="koraplay_task"
         android:name="${applicationName}"

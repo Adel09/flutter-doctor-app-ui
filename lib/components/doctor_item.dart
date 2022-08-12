@@ -23,7 +23,7 @@ class DoctorListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.113,
+      height: 101,
       width: MediaQuery.of(context).size.width,
       margin: EdgeInsets.only(bottom: 14),
       decoration: BoxDecoration(
@@ -52,7 +52,7 @@ class DoctorListItem extends StatelessWidget {
           ],
         ),
         child: Container(
-          height: MediaQuery.of(context).size.height * 0.113,
+          height: 101,
           width: MediaQuery.of(context).size.width,
           padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
           decoration: BoxDecoration(
