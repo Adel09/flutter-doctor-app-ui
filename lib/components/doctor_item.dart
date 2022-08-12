@@ -33,37 +33,19 @@ class DoctorListItem extends StatelessWidget {
           extentRatio: 1/5,
           motion: ScrollMotion(),
           children: [
-
-            // SlidableAction(
-            //   // An action can be bigger than the others.
-            //   flex: 1,
-            //   onPressed: onPressed,
-            //   backgroundColor: KPrimaryColor,
-            //   foregroundColor: Colors.white,
-            //   icon: Icons.archive,
-            //   borderRadius: BorderRadius.only(topRight: Radius.circular(16), bottomRight: Radius.circular(16)),
-            //   //label: 'Archive',
-            // ),
             CustomSlidableAction(
+              backgroundColor: KPrimaryColor,
               flex: 1,
-                foregroundColor: KPrimaryColor,
-                onPressed: onPressed,
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Flexible(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: KPrimaryColor,
-                          borderRadius: BorderRadius.only(topRight: Radius.circular(16), bottomRight: Radius.circular(16)),
-                        ),
-                        child: Center(
-                          child: Image(image: AssetImage("assets/images/icons/messageicon.png"),),
-                        ),
-                      ),
-                    ),
-                  ],
-                )
+              onPressed: onPressed,
+              borderRadius: BorderRadius.only(topRight: Radius.circular(16), bottomRight: Radius.circular(16)),
+              child: Container(
+                  decoration: BoxDecoration(
+                    color: KPrimaryColor,
+                  ),
+                  child: Center(
+                    child: Image(image: AssetImage("assets/images/icons/messageicon.png"),),
+                  ),
+                ),
             )
           ],
         ),

@@ -18,15 +18,20 @@ class _DetailsScreenState extends State<DetailsScreen> {
         backgroundColor: Color(0xff363CC0),
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Container(
-            height: 44,
-            width: 44,
-            decoration: BoxDecoration(
-                color: Color(0xffEDF0FA).withOpacity(0.12),
-                borderRadius: BorderRadius.circular(11)
-            ),
-            child: Center(
-              child: Icon(Icons.arrow_back_rounded),
+          child: GestureDetector(
+            onTap: (){
+              Navigator.pop(context);
+            },
+            child: Container(
+              height: 44,
+              width: 44,
+              decoration: BoxDecoration(
+                  color: Color(0xffEDF0FA).withOpacity(0.12),
+                  borderRadius: BorderRadius.circular(11)
+              ),
+              child: Center(
+                child: Icon(Icons.arrow_back_rounded),
+              ),
             ),
           ),
         ),
@@ -61,10 +66,17 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       children: [
                         Stack(
                           children: [
-                            SizedBox(height: MediaQuery.of(context).size.height * 0.19, child: Image(image: AssetImage("assets/images/threecircles.png"))),
+                            Column(
+
+                              children: [
+                                SizedBox(height: 9,),
+                                SizedBox(height: MediaQuery.of(context).size.height * 0.19, child: Image(image: AssetImage("assets/images/threecircles.png"))),
+                              ],
+                              mainAxisSize: MainAxisSize.min,
+                            ),
                           Container(
                             height: MediaQuery.of(context).size.height * 0.23,
-                            width: MediaQuery.of(context).size.width * 0.40,
+                            width: MediaQuery.of(context).size.width * 0.42,
                             decoration: BoxDecoration(
                               image: DecorationImage(image: AssetImage("assets/images/maledoc.png")),
                               //color: Colors.green,
@@ -86,12 +98,12 @@ class _DetailsScreenState extends State<DetailsScreen> {
                         "Dr. Jenny Wilson",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 30,
-                          fontWeight: FontWeight.w500
+                          fontSize: 27,
+                          fontWeight: FontWeight.w600
                         ),
                       ),
                       SizedBox(
-                        height: 8,
+                        height: 6,
                       ),
                       Row(
                         children: [
@@ -131,7 +143,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                           )
                         ],
                       ),
-                      SizedBox(height: 15,),
+                      SizedBox(height: 12,),
                       Column(
                         mainAxisSize: MainAxisSize.min,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -153,7 +165,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                           )
                         ],
                       ),
-                      SizedBox(height: 16,),
+                      SizedBox(height: 12,),
                       Column(
                         mainAxisSize: MainAxisSize.min,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -245,7 +257,44 @@ class _DetailsScreenState extends State<DetailsScreen> {
                     scheduleObject("Wed", "16"),
                     scheduleObject("Thu", "17"),
                   ],
+                ),
+                SizedBox(height: 17,),
+                Text(
+                  "Location",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500
+                  ),
+                ),
+                SizedBox(height: 14,),
+                Center(child: Image(image: AssetImage("assets/images/mappic.png"))),
+                SizedBox(height: 16,),
+                Container(
+                  width: double.infinity,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(16)
+                  ),
+
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        SizedBox(width: 20,),
+                        Text(
+                          "Book an Appointment",
+                          style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w500),
+                        ),
+                        Icon(Icons.arrow_forward_ios, color: Colors.white,),
+                      ],
+                    ),
+                  ),
                 )
+
+
               ],
             ),
           )

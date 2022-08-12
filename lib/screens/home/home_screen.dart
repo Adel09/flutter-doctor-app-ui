@@ -17,6 +17,11 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 0,
+        elevation: 0,
+        backgroundColor: Colors.white,
+      ),
       backgroundColor: Colors.white,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
@@ -64,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 22,),
+            SizedBox(height: 18,),
             HomeSectionHeader(title: "Upcoming Appointment"),
             SizedBox(height: 16,),
             AppointmentCard(
@@ -104,9 +109,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 24,),
+            SizedBox(height: 20,),
             HomeSectionHeader(title: "Category"),
-            SizedBox(height: 16,),
+            SizedBox(height: 14,),
             SizedBox(
               height: 40,
               child: ListView(
@@ -133,8 +138,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 24,),
+            SizedBox(height: 17,),
             HomeSectionHeader(title: "Top Rated Doctor"),
+            SizedBox(height: 5,),
             DoctorListItem(
               name: "Dr. Ronald Richard",
               specialty: "Heart Surgeon",
@@ -157,22 +163,23 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       bottomNavigationBar: FloatingNavbar(
-        borderRadius: 16.0,
-        margin: EdgeInsets.symmetric(horizontal: 20, vertical: 0),
-        onTap: (int val) {
-          //returns tab id which is user tapped
-        },
-        currentIndex: 0,
-        selectedBackgroundColor: Colors.black,
-        selectedItemColor: Colors.white,
 
-        items: [
-          FloatingNavbarItem(customWidget: SizedBox(height: 24, width: 24, child: Image(image: AssetImage("assets/images/icons/homeicon.png"),))),
-          FloatingNavbarItem(customWidget: SizedBox(height: 24, width: 24, child: Image(image: AssetImage("assets/images/icons/calendaricon.png"),))),
-          FloatingNavbarItem(customWidget: SizedBox(height: 24, width: 24,child: Image(image: AssetImage("assets/images/icons/chaticon.png"),))),
-          FloatingNavbarItem(customWidget: SizedBox(height: 24, width: 24,child: Image(image: AssetImage("assets/images/icons/profileicon.png"),))),
-        ],
-      ),
+  borderRadius: 16.0,
+  margin: EdgeInsets.symmetric(horizontal: 20, vertical: 0),
+  onTap: (int val) {
+    //returns tab id which is user tapped
+  },
+  currentIndex: 0,
+  selectedBackgroundColor: Colors.black,
+  selectedItemColor: Colors.white,
+
+  items: [
+    FloatingNavbarItem(customWidget: SizedBox(height: 24, width: 24, child: Image(image: AssetImage("assets/images/icons/homeicon.png"),))),
+    FloatingNavbarItem(customWidget: SizedBox(height: 24, width: 24, child: Image(image: AssetImage("assets/images/icons/calendaricon.png"),))),
+    FloatingNavbarItem(customWidget: SizedBox(height: 24, width: 24,child: Image(image: AssetImage("assets/images/icons/chaticon.png"),))),
+    FloatingNavbarItem(customWidget: SizedBox(height: 24, width: 24,child: Image(image: AssetImage("assets/images/icons/profileicon.png"),))),
+  ],
+),
     );
   }
 
