@@ -142,12 +142,20 @@ class _HomeScreenState extends State<HomeScreen> {
             HomeSectionHeader(title: "Top Rated Doctor"),
             SizedBox(height: 5,),
             DoctorListItem(
+              docimage: AssetImage("assets/images/maledocheadshot.jpeg"),
               name: "Dr. Ronald Richard",
               specialty: "Heart Surgeon",
               rating: "4.3",
               times: "11 Am-03 Pm",
+              onPressed: (context){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => DetailsScreen())
+                );
+              },
             ),
             DoctorListItem(
+              docimage: AssetImage("assets/images/femaledocheadshot.jpeg"),
               name: "Dr. Jenny Wilson",
               specialty: "Dental Surgeon",
               rating: "4.9",

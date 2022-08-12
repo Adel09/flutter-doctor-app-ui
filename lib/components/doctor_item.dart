@@ -9,10 +9,12 @@ class DoctorListItem extends StatelessWidget {
     required this.specialty,
     this.rating = "4.0",
     this.times = "12PM-1PM",
-    this.onPressed
+    this.onPressed,
+    required this.docimage
   }) : super(key: key);
 
   final String name;
+  final ImageProvider docimage;
   final String specialty;
   final String rating;
   final String times;
@@ -67,7 +69,7 @@ class DoctorListItem extends StatelessWidget {
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: NetworkImage("https://images.squarespace-cdn.com/content/v1/560ee0e1e4b095574c38f56e/1459499051928-ZTGFU9VVVM2ANTNOM33Q/Medical-Dr-MD-Portrait-Headshot-Hospital-KarenVaisman-Photography.jpg?format=1500w")
+                    image: docimage
                   ),
                   borderRadius: BorderRadius.circular(9)
                 ),
