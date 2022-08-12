@@ -56,7 +56,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   color: Colors.white,
                   borderRadius: BorderRadius.vertical(
                       top: Radius.elliptical(
-                          MediaQuery.of(context).size.height, 240.0)),
+                          MediaQuery.of(context).size.width, 150)),
                 ),
                 child: Center(
                   child: Column(
