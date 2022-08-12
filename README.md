@@ -1,8 +1,7 @@
 # Flutter Doctor App UI
 
 <p>A very cool flutter app implementing the design for the Doctor App UI Design as seen below</p>
-![koraplay task ui](https://user-images.githubusercontent.com/18511990/184431580-32515047-b446-4772-a337-906101176580.png)
-
+<img alt="Koraplay task UI Design" src="https://user-images.githubusercontent.com/18511990/184431580-32515047-b446-4772-a337-906101176580.png">
 <p>This is for the Koraplay assessment test</p>
 
 ## Dependencies
